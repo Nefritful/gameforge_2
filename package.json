@@ -4,13 +4,11 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "vite --host 0.0.0.0 --port 5173",
+    "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
     "server": "node server/index.js",
-    "check": "node --check server/index.js",
-    "dev:frontend": "vite --host 0.0.0.0 --port 5173",
-    "start:all": "node server/index.js & vite --host 0.0.0.0 --port 5173"
+    "check": "node --check server/index.js"
   },
   "dependencies": {
     "express": "^4.19.2",

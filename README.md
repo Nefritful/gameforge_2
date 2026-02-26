@@ -19,33 +19,9 @@
 Пример:
 `storage/user_projects/nefrit%40gmail.com/project1`
 
-## Как запустить
-Откройте **2 терминала** в корне репозитория.
-
-### 1) Установка зависимостей
+## Запуск
 ```bash
 npm install
-```
-
-### 2) Запуск backend (порт 3001)
-```bash
 npm run server
-```
-
-### 3) Запуск frontend (порт 5173)
-```bash
 npm run dev
 ```
-
-После этого откройте:
-- `http://localhost:5173/` — фронтенд
-- `http://localhost:3001/api/config` — проверка backend
-
-## Если `ERR_CONNECTION_REFUSED` на `http://localhost:5173/`
-Это означает, что Vite dev server не запущен или упал.
-
-Проверьте:
-1. Команда `npm run dev` действительно запущена и в логах есть `Local: http://localhost:5173/`.
-2. Порт 5173 свободен и не занят другим процессом.
-3. Если запускаете в контейнере/на удалённой машине — сервер уже настроен на `0.0.0.0`.
-4. Если `npm install` падает с `403 Forbidden`, это проблема доступа к npm registry в окружении, нужно настроить registry/proxy или запускать в среде с доступом к npm.
