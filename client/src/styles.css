@@ -1,0 +1,138 @@
+:root {
+  font-family: Inter, system-ui, sans-serif;
+  color: #e5e7eb;
+  background: #020617;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; }
+
+.scene-select-page,
+.editor-page {
+  min-height: 100vh;
+  padding: 16px;
+}
+
+.card,
+.panel {
+  background: #0f172a;
+  border: 1px solid #1e293b;
+  border-radius: 12px;
+  padding: 12px;
+}
+
+.scene-select-page input,
+.properties-grid input {
+  width: 100%;
+  margin-bottom: 8px;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #334155;
+  background: #111827;
+  color: #e5e7eb;
+}
+
+button {
+  border: 1px solid #334155;
+  background: #1d4ed8;
+  color: white;
+  border-radius: 8px;
+  padding: 6px 10px;
+  cursor: pointer;
+}
+
+.top-bar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.workspace-grid {
+  display: grid;
+  grid-template-columns: 22% 1fr 22%;
+  gap: 10px;
+}
+
+.center-column {
+  display: grid;
+  gap: 10px;
+}
+
+.panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.tree-list {
+  list-style: none;
+  margin: 8px 0 0;
+  padding: 0;
+  display: grid;
+  gap: 6px;
+}
+
+.tree-list li {
+  padding: 8px;
+  border-radius: 8px;
+  background: #1e293b;
+}
+
+.badge {
+  margin-right: 8px;
+  padding: 2px 6px;
+  border-radius: 6px;
+  font-size: 12px;
+}
+
+.badge-object { background: #2563eb; }
+.badge-pawn { background: #16a34a; }
+.badge-area { background: #9333ea; }
+.badge-ui { background: #db2777; }
+
+.canvas-host {
+  min-height: 500px;
+  border: 1px dashed #334155;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.properties-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.file-node.folder::before { content: '📁 '; }
+.file-node.file::before { content: '📄 '; }
+
+.blueprint-panel .nodes-row { display: flex; gap: 10px; }
+.node-card { padding: 10px; border-radius: 8px; background: #1f2937; border: 1px solid #334155; }
+.node-event { border-color: #2563eb; }
+.node-action { border-color: #16a34a; }
+.node-ui { border-color: #db2777; }
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  display: grid;
+  place-items: center;
+}
+
+.modal-window {
+  background: #0b1220;
+  border-radius: 12px;
+  border: 1px solid #334155;
+  padding: 12px;
+  min-width: 800px;
+}
+
+.modal-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.button-row { display: flex; gap: 8px; margin: 8px 0; }
